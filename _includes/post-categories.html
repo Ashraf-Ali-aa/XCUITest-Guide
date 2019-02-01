@@ -1,0 +1,6 @@
+{% for tag in page.tags %}
+{% capture tag_name %}{{ tag }}{% endcapture %}
+<a class="label label-green" href="{{ site.baseurl }}/tag/{{ tag_name }}">
+  {{ tag_name }}
+</a>
+{% endfor %}

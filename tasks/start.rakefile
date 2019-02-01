@@ -1,0 +1,17 @@
+desc 'Start website'
+task start: [
+  'start:update_search',
+  'start:jekyll_start'
+]
+
+namespace :start do
+
+  task :jekyll_start do
+    sh 'bundle exec jekyll serve --watch'
+  end
+
+  task :update_search do
+    sh 'bundle exec just-the-docs rake search:init'
+  end
+
+end

@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{% assign tutorials = site.pages | where: "tags" , page.tag %}
+
+<div class="post">
+  <h1>Tag: {{ page.tag }}</h1>
+  <ul>
+    {% for post in tutorials %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a><br>
+      {{ post.content | markdownify | remove: 'Table of contents' | remove: '```' | remove: '---' }}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+<hr>

@@ -1,0 +1,164 @@
+/* Red, green and yellow text sections */
+.warning,
+.note,
+.tip {
+    padding: 10px 10px 10px 20px;
+    border-radius: 0 4px 4px 0;
+    color: $grey-dk-100;
+
+    a {
+        color: $grey-dk-100;
+
+        &:hover {}
+    }
+}
+
+.tip {
+    background-color: #89dc8b;
+    border-left: 7px solid darken(#89dc8b, 15%);
+
+    &:before {
+        content: "Tip:";
+        font-weight: bold;
+        display: block;
+    }
+}
+
+.note {
+    background-color: $yellow-100;
+    border-left: 7px solid darken($yellow-200, 15%);
+
+    &:before {
+        content: "Note:";
+        font-weight: bold;
+        display: block;
+    }
+}
+
+.warning {
+    background-color: #f56767;
+    border-left: 7px solid darken(#ea6d6d, 15%);
+
+    &:before {
+        content: "Warning:";
+        font-weight: bold;
+        display: block;
+    }
+}
+
+.source {
+    border-left: 7px solid darken($green-000, 15%);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07),
+        0 4px 14px rgba(0, 0, 0, 0.05);
+
+    &:before {
+        content: "Source:";
+        font-weight: bold;
+        display: block;
+    }
+}
+
+code {
+    padding: 0 !important;
+    font-weight: 400;
+    background-color: unset;
+    border: 0 !important;
+    border-radius: $border-radius;
+}
+
+.highlight {
+    position: relative;
+    background: #ffffff;
+
+    pre {
+
+        /* ... */
+        code {
+            padding: 0 !important;
+            border: 0 !important;
+
+        }
+    }
+}
+
+.highlighter-rouge .highlight {
+    background: #2c2b30 !important;
+}
+
+pre {
+    .highlight {
+        padding: 0.25rem;
+        margin-bottom: 0;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+pre.highlight {
+
+    padding: 0px;
+
+}
+
+.highlight {
+    background: #fff;
+
+    .highlighter-rouge & {
+        background: #eef;
+    }
+
+    .rouge-gutter,
+    .gutter {
+        table-layout: fixed;
+        width: 10px;
+        min-width: 10px;
+        background: #2c2b30;
+    }
+
+    .lineno {
+        color: #ccc;
+        text-align: center;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .rouge-code,
+    .code {
+        background: #2c2b30;
+        border-left: 1px solid #3f3f3f;
+    }
+
+    pre {
+        color: $grey-dk-000;
+    }
+
+    .gd {
+        color: $red-200;
+    }
+
+    .gi {
+        color: $green-200;
+    }
+
+}
+
+.selected {
+    background: #f5f6fa;
+}
+
+.rouge-table {
+
+    margin-bottom: 0px;
+
+}
+
+p .highlighter-rouge {
+    padding: .25em .5em !important;
+    font-size: 85%;
+    color: $red-300;
+    background-color: #ececec;
+    border-radius: 3px;
+}
