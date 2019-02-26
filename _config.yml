@@ -36,8 +36,8 @@ kramdown:
     block:
       line_numbers: true
 
-# remote_theme: pmarsceill/just-the-docs
-theme: just-the-docs
+remote_theme: pmarsceill/just-the-docs
+# theme: just-the-docs
 
 sass:
   style: compact
